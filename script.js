@@ -38,3 +38,28 @@ function array_range(first, len) {
     }
     return myAnswer;
 }
+
+//4. 
+
+function move(arr, elem, step) {
+    let movable = arr[elem];
+    arr.splice(elem, 1);
+    arr.splice(step, 0, movable)
+    return arr;
+}
+
+
+//6.
+
+function checkPrime(arr) {
+    let testArray=[];
+    arr.forEach(element => {
+        if (element%2==1){
+            testArray.push(true);
+        }else{testArray.push(false)}
+    });
+    if(testArray.includes(false) == true){
+        return false
+    }else{return true
+    }
+}
